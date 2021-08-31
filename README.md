@@ -57,3 +57,17 @@ The player can accumulate up to 10 safe teleports.
 This guarantees that the human will teleport to a location that will not result in their immediate death.
 All teleports are "safe" until the number of safe teleports remaining is zero;
 it is not possible to perform an unsafe teleport if safe teleports are available.
+
+#### Cascading
+
+The player can trigger a cascade at any point in the game.
+This will freeze the human in the current position, unable to move.
+The robots will iteratively move until all of the robots are dead or until the human is dead.
+
+If the human survives, then the player is given 1 new safe teleport for each robot killed in the cascading process.
+This is really the only reason to initiate a cascade.
+
+For example, the two positions circled in *Fig 1* are cascade-safe.
+If the human moves there, then they can trigger a cascade and survive between the robots will all walk into explosions.
+The first robot will die when the human walks into one of those spaces.
+The second robot will die in the cascade, so the human will only be given 1 new safe teleport.
