@@ -81,3 +81,12 @@ Level 20 has 200 robots, for example.
 
 The human begins each level at the center of the board and each robot's position is randomly generated.
 Robots will **not** spawn in the same cell as the human or the same cell as each other.
+
+If you beat level 66, you beat the game!
+
+### Summary
+
+Robots is a turn-based game.
+For a given turn, the human has 11 moves available to it (9 in the 3x3 grid around the human, 1 for teleport, 1 to trigger a cascade).
+After each human move, all robots move towards the human.
+If the robots reach the human (by occupying the same cell), the game is over.
