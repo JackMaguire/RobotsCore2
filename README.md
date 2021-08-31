@@ -93,4 +93,13 @@ If the robots reach the human (by occupying the same cell), the game is over.
 
 The human's general strategy is to kill the robots by making them collide with one another,
 all while being mindful of the number of safe teleports remaining.
-The art of the game is orchestrating cave-like patterns of explosions that create safe spaces for the human to hide in.
+The art of the game is orchestrating cave-like patterns of explosions that create safe spaces for the human to hide in:
+
+
+![Cave2_before.png](Cave2_before.png)
+
+*Fig 2: A safe place to initiate a cascade*
+
+![Cave2_after.png](Cave2_after.png)
+
+*Fig 3: The aftermath of the first iteration of cascading from Fig 2*
