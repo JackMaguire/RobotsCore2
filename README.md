@@ -11,20 +11,20 @@
 
 *Fig 1*
 
-#### Board
+### Board
 
 The board is a grid of spaces.
 There is one human (green),
 one or more robots (blue),
 and zero or more explosions (red).
 
-#### Basic Human Moves
+### Basic Human Moves
 
 Robots is a turn-based game.
 The human has 9 directional options: up-left, up, up-right, left, center, right, down-left, down, and down-right.
 Basically, the human can move to any of the spaces in the 3x3 grid centered at the human's position.
 
-#### Robot Moves
+### Robot Moves
 
 Like the human, each robot can move to any of the cells in the 3x3 grid centered at the robot.
 After every move the human makes, each robot takes a deterministic step in the direction of the human:
@@ -40,13 +40,13 @@ if(      human_position_.y < pos.y ) pos.y -= 1;
 else if( human_position_.y > pos.y ) pos.y += 1;
 ```
 
-#### Explosions
+### Explosions
 
 An explosion is created whenever two robots move into the same cell.
 This kills the two robots and any other robot that occupies that cell in the future.
 Explosions persist until the end of each round, at which point they are all removed.
 
-#### Teleports
+### Teleports
 
 Inevitably, the human will be cornered and will reach a point where no moves are legal.
 At this point, they can teleport to a randomly selected position in the board.
@@ -58,7 +58,7 @@ This guarantees that the human will teleport to a location that will not result 
 All teleports are "safe" until the number of safe teleports remaining is zero;
 it is not possible to perform an unsafe teleport if safe teleports are available.
 
-#### Cascading
+### Cascading
 
 The player can trigger a cascade at any point in the game.
 This will freeze the human in the current position, unable to move.
@@ -71,3 +71,13 @@ For example, the two positions circled in *Fig 1* are cascade-safe.
 If the human moves there, then they can trigger a cascade and survive between the robots will all walk into explosions.
 The first robot will die when the human walks into one of those spaces.
 The second robot will die in the cascade, so the human will only be given 1 new safe teleport.
+
+### Levels
+
+If the humans kill all of the robots, then the level is over.
+There are 66 total levels, each with more robots.
+The number of robots in a given level is computed by multiplying the level number by 10.
+Level 20 has 200 robots, for example.
+
+The human begins each level at the center of the board and each robot's position is randomly generated.
+Robots will **not** spawn in the same cell as the human or the same cell as each other.
