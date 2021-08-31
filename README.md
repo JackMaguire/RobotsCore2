@@ -90,3 +90,7 @@ Robots is a turn-based game.
 For a given turn, the human has 11 moves available to it (9 in the 3x3 grid around the human, 1 for teleport, 1 to trigger a cascade).
 After each human move, all robots move towards the human.
 If the robots reach the human (by occupying the same cell), the game is over.
+
+The human's general strategy is to kill the robots by making them collide with one another,
+all while being mindful of the number of safe teleports remaining.
+The art of the game is orchestrating cave-like patterns of explosions that create safe spaces for the human to hide in.
